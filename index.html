@@ -865,11 +865,19 @@ section {
   margin-bottom: 44px;
 }
 
+.contribution-wrapper {
+  overflow-x: auto;
+  margin-bottom: 22px;
+  padding-bottom: 6px;
+}
+
 .contribution-grid {
-  display: grid;
+  display: inline-grid;
   grid-template-columns: repeat(45, 1fr);
   gap: 7px;
-  margin-bottom: 22px;
+  min-width: 100%;
+  
+  margin-bottom: 0;
 }
 
 .day {
@@ -1138,10 +1146,12 @@ footer {
   }
   .github-box {
     padding: 18px;
-    overflow-x: auto;
+    overflow-x: visible;
   }
+
   .contribution-grid {
     min-width: 680px;
+    padding-right: 5px;
   }
   .hero-buttons,
   .section-actions {
@@ -1461,7 +1471,9 @@ footer {
       <h2 class="section-title blue">Github Statistics</h2>
     </div>
     <div class="github-box" data-reveal>
-      <div class="contribution-grid" id="contributionGrid"></div>
+      <div class="contribution-wrapper">
+        <div class="contribution-grid" id="contributionGrid"></div>
+      </div>
       <div class="legend"><span>LESS</span><span>MORE</span></div>
     </div>
     <div class="stat-grid">
