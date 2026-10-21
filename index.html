@@ -34,7 +34,9 @@ html {
   scroll-behavior: smooth;
 }
 
-body {
+html, body {
+  width: 100%;
+  max-width: 100%;
   font-family: "Inter", Arial, sans-serif;
   background: var(--white);
   color: var(--black);
@@ -1152,6 +1154,17 @@ footer {
     right: 14px;
     bottom: 14px;
   }
+  .name-board {
+  max-width: 100%;
+  word-break: break-word;
+  box-shadow: var(--shadow);
+}
+.photo-frame::after {
+  right: -8px;
+  bottom: -8px;
+  width: 60px;
+  height: 60px;
+}
 }
 
   </style>
@@ -1374,7 +1387,10 @@ footer {
         <div class="skill-card"><i class="fa-brands fa-figma"></i><span>Figma</span></div>
         <div class="skill-card"><i class="fa-brands fa-github"></i><span>Github</span></div>
         <div class="skill-card"><i class="fa-solid fa-chart-line"></i><span>Analytics</span></div>
-        <div class="skill-card"><i class="fa-solid fa-network-wired"></i><span>Cisco</span></div>
+     <div class="skill-card">
+  <img src="https://cdn.simpleicons.org/googlecolab/F9AB00" alt="Google Colab" style="width: 2.6rem; height: 2.6rem;">
+  <span>Google Colab</span>
+</div>
       </div>
     </div>
   </div>
