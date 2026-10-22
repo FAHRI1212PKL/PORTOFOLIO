@@ -529,6 +529,13 @@ section {
   place-items: center;
 }
 
+.project-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  padding-top: 34px;
+}
+
 .browser-bar {
   position: absolute;
   top: 0;
@@ -747,18 +754,20 @@ section {
 .certificate-preview {
   border: 3px solid var(--black);
   height: 220px;
-  background: linear-gradient(135deg, #fff 0%, #fff 58%, var(--blue) 58%, var(--blue) 72%, var(--yellow) 72%);
-  display: grid;
-  place-items: center;
-  text-align: center;
-  padding: 18px;
   margin-bottom: 22px;
   position: relative;
   overflow: hidden;
+  background: #fff;
+}
+
+.certificate-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .certificate-preview::before {
-  content: "CERTIFICATE";
+  
   position: absolute;
   top: 15px;
   left: 15px;
@@ -1304,14 +1313,16 @@ footer {
       <article class="project-card" data-category="web" data-reveal>
         <div class="project-thumb">
           <div class="browser-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
-          <div class="mockup-news"><div class="hero-line"></div><div class="small-lines"><div class="line"></div><div class="line"></div></div><div class="line"></div></div>
+          <img src="Preview-Desa-Bugangan.png" alt="Website Desa Bugangan">
         </div>
         <div class="project-body">
           <h3>Website Desa Bugangan</h3>
           <p data-id="Website berita digital untuk menampilkan informasi terbaru dengan layout rapi, cepat, dan responsif." data-en="A digital news website that displays updated information with a clean, fast, and responsive layout.">Website berita digital untuk menampilkan informasi terbaru dengan layout rapi, cepat, dan responsif.</p>
           <div class="tech-list"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span><span class="tag">API</span></div>
-          <div class="card-actions"><a class="small-link" href="#">DETAILS</a><a class="small-link" href="#">LIVE</a></div>
-        </div>
+          <div class="card-actions">
+  <a class="small-link" href="#" target="_blank">DETAILS</a>
+  <a class="small-link" href="https://buganganv1.vercel.app" target="_blank">LIVE</a>
+</div>
       </article>
 
       <article class="project-card" data-category="web" data-reveal>
@@ -1413,9 +1424,11 @@ footer {
     </div>
     <div class="certificate-grid">
       <div class="certificate-card" data-reveal>
-        <div class="certificate-preview"><strong>Network Fundamentals</strong></div>
-        <h3>CCNA 200-301</h3>
-        <p data-id="Dasar jaringan komputer, routing, switching, dan konsep keamanan jaringan." data-en="Computer networking fundamentals, routing, switching, and network security concepts.">Dasar jaringan komputer, routing, switching, dan konsep keamanan jaringan.</p>
+        <div class="certificate-preview">
+  <img src="Sertifikat-Teman-Coding.jpg" alt="Sertifikat Teman Coding">
+</div>
+        <h3>Teman Coding HTML CSS</h3>
+        <p data-id="Dasar pembelajaran basic mengenai materi HTML dan CSS." data-en="Basic learning regarding HTML and CSS material.">Dasar pembelajaran basic mengenai materi HTML dan CSS.</p>
         <a class="btn" href="#">DETAILS</a>
       </div>
       <div class="certificate-card" data-reveal>
