@@ -37,14 +37,18 @@
       scroll-behavior: smooth;
     }
 
-    html, body {
-      width: 100%;
-      max-width: 100%;
-      font-family: "Inter", Arial, sans-serif;
-      background: var(--white);
-      color: var(--black);
-      overflow-x: hidden;
-    }
+    html {
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  max-width: 100%;
+  font-family: "Inter", Arial, sans-serif;
+  background: var(--white);
+  color: var(--black);
+  overflow-x: hidden;
+}
 
     body.dark {
       --white: #0f0f14;
@@ -73,15 +77,18 @@
     }
 
     .navbar {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      height: var(--nav-height);
-      background: var(--white);
-      border-bottom: var(--border);
-      display: flex;
-      align-items: center;
-    }
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  height: var(--nav-height);
+  background: var(--white);
+  border-bottom: var(--border);
+  display: flex;
+  align-items: center;
+  transition: height 0.2s ease;
+}
 
     .nav-wrap {
       width: min(1280px, calc(100% - 32px));
@@ -200,18 +207,19 @@
     }
 
     .hero {
-      min-height: calc(100vh - var(--nav-height));
-      position: relative;
-      background:
-        radial-gradient(circle at 14px 14px, rgba(0, 0, 0, 0.18) 2px, transparent 2px),
-        var(--yellow);
-      background-size: 28px 28px;
-      border-bottom: var(--border);
-      display: grid;
-      place-items: center;
-      overflow: hidden;
-      padding: 75px 0;
-    }
+  min-height: calc(100vh - var(--nav-height));
+  margin-top: var(--nav-height);
+  position: relative;
+  background:
+    radial-gradient(circle at 14px 14px, rgba(0, 0, 0, 0.18) 2px, transparent 2px),
+    var(--yellow);
+  background-size: 28px 28px;
+  border-bottom: var(--border);
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  padding: 75px 0;
+}
 
     .hero::before,
     .hero::after {
@@ -1178,10 +1186,11 @@
     }
 
     @media (max-width: 680px) {
-      :root {
-        --shadow: 6px 6px 0 var(--black);
-        --shadow-small: 4px 4px 0 var(--black);
-      }
+  :root {
+    --shadow: 6px 6px 0 var(--black);
+    --shadow-small: 4px 4px 0 var(--black);
+    --nav-height: 64px;
+  }
       .nav-wrap {
         width: min(100%, calc(100% - 22px));
       }
